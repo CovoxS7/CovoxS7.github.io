@@ -1,0 +1,248 @@
+/* === FONTS === */
+
+@font-face {
+    font-family: 'Dancing Script';
+    font-style: normal;
+    font-weight: 400;
+    src: url('..//dancing-script/dancing-script-v24-latin-regular.eot');
+    src: local(''),
+         url('../fonts/dancing-script/dancing-script-v24-latin-regular.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/dancing-script/dancing-script-v24-latin-regular.woff2') format('woff2'),
+         url('../fonts/dancing-script/dancing-script-v24-latin-regular.woff') format('woff'),
+         url('../fonts/dancing-script/dancing-script-v24-latin-regular.ttf') format('truetype'),
+         url('../fonts/dancing-script/dancing-script-v24-latin-regular.svg#DancingScript') format('svg');
+  }
+
+@font-face {
+font-family: 'Dancing Script';
+font-style: normal;
+font-weight: 700;
+src: url('../fonts/dancing-script/dancing-script-v24-latin-700.eot');
+src: local(''),
+        url('../fonts/dancing-script/dancing-script-v24-latin-700.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/dancing-script/dancing-script-v24-latin-700.woff2') format('woff2'),
+        url('../fonts/dancing-script/dancing-script-v24-latin-700.woff') format('woff'),
+        url('../fonts/dancing-script/dancing-script-v24-latin-700.ttf') format('truetype'),
+        url('../fonts/dancing-script/dancing-script-v24-latin-700.svg#DancingScript') format('svg');
+}
+
+@font-face {
+    font-family: 'roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/roboto/roboto-regular-webfont.eot');
+    src: local(''),
+          url('../fonts/roboto/roboto-regular-webfont.eot?#iefix') format('embedded-opentype'),
+          url('../fonts/roboto/roboto-regular-webfont.woff2') format('woff2'),
+          url('../fonts/roboto/roboto-regular-webfont.woff') format('woff'),
+          url('../fonts/roboto/roboto-regular-webfont.ttf') format('truetype'),
+          url('../fonts/roboto/roboto-regular-webfont.svg') format('svg');
+  }
+
+/* === GLOBAL === */
+
+:root {
+    --weiß: #FFF;
+    --hell-grau: #F0F0F0;
+    --dunkel-grau: #3D3F45;
+    --schwarz: #000;
+    --rot: #AF4343;
+    --grün: #358839;
+    --primaere-schriftart: roboto;
+    --sekundaere-schriftart: 'Dancing Script';
+    --tertiaere-schriftart: sans-serif;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    margin: 0;
+    font-family: var(--primaere-schriftart, --tertiaere-schriftart);
+    background-image: url(../img/fruit-g2e24119d5_1920.jpg);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* === GENERELLES === */
+
+.screenreader {
+    display: none;
+}
+
+.btn-1 {
+    background-color: var(--hell-grau);
+    width: 100%;
+    height: 2rem;
+    margin: .5rem 0;
+    font-size: 1.2rem;
+    border: .1rem solid var(--schwarz);
+    border-bottom-right-radius: 1.5rem;
+    border-top-right-radius: 1.5rem;
+    border-bottom-left-radius: 1.5rem;
+    border-top-left-radius: 1.5rem;
+}
+
+/* === PAGE-WRAPPER === */
+
+#page-wrapper {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 10vh 80vh 10vh;
+    grid-template-areas: "header" "main" "footer";
+}
+
+@media (min-width: 1024px) {
+    #page-wrapper {
+        grid-template-columns: 25% 50% 25%;
+        grid-template-rows: 10vh 80vh 10vh;
+        grid-template-areas: 
+            "header header header" 
+            ". main ." 
+            "footer footer footer";
+    }
+}
+
+header {
+    grid-area: header;
+}
+
+main {
+    grid-area: main;
+}
+
+footer {
+    grid-area: footer;
+    background-color: var(--hell-grau);
+}
+
+/* === HEADER === */
+
+header {
+    background-color: var(--dunkel-grau);
+    font-family: var(--sekundaere-schriftart, --tertiaere-schriftart);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1{
+    font-size: 2.5rem;
+    color: var(--hell-grau);
+    margin: 0;
+}
+
+/* === MAIN === */
+
+main {
+    background-color: var(--hell-grau);
+    opacity: .9;
+    }
+
+/* === EINKAUFLISTE === */
+
+#einkaufslisten-container {
+    height: 80vh;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 3rem auto 3rem;
+    grid-template-areas: "artikel-hinzufuegen" "artikel-ul" "artikel-entfernen";
+}
+
+#artikel-hinzufuegen {
+    grid-area: artikel-hinzufuegen;
+}
+
+#artikel-entfernen {
+    grid-area: artikel-entfernen;
+}
+
+#einkaufslisten-container > ul {
+    grid-area: artikel-ul;
+    overflow-y: scroll;
+    font-size: 1.2rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#einkaufslisten-container > ul > li {
+    display: flex;
+    margin-bottom: .3rem;
+}
+
+#einkaufslisten-container > ul > li > .menge {
+    background-color: var(--dunkel-grau);
+    color: var(--hell-grau);
+    width: 4rem;
+    padding-left: .8rem;
+    border-top: .1rem solid var(--schwarz);
+    border-right: none;
+    border-bottom: .1rem solid var(--schwarz);
+    border-left: .1rem solid var(--schwarz);
+    border-bottom-left-radius: 1.5rem;
+    border-top-left-radius: 1.5rem;
+    flex-grow: 0;
+}
+
+#einkaufslisten-container > ul > li > .artikel {
+    padding-left: 0.8rem;
+    border-top: .1rem solid var(--schwarz);
+    border-right: .1rem solid var(--schwarz);
+    border-bottom: .1rem solid var(--schwarz);
+    border-left: none;
+    border-bottom-right-radius: 1.5rem;
+    border-top-right-radius: 1.5rem;
+    flex-grow: 1;
+}
+
+#einkaufslisten-container > ul > li > .gekauft {
+    background-color: var(--rot);
+}
+
+/* === EINGABEFORMULAR === */
+
+.eingabeformular-felder {
+    background-color: var(--weiß);
+    width: 100%;
+    height: 2rem;
+    margin-top: .5rem;
+    font-size: 1.2rem;
+    border: .1rem solid var(--schwarz);
+    border-bottom-right-radius: 1.5rem;
+    border-top-right-radius: 1.5rem;
+    border-bottom-left-radius: 1.5rem;
+    border-top-left-radius: 1.5rem;
+    text-align: center;
+}
+
+.typ-auswahl {
+    display: flex;
+}
+
+.typ-auswahl>input[type="radio"] {
+    display: none;
+}
+
+.typ-auswahl>input[type="radio"]:checked+label {
+    background-color: var(--grün);
+    color: var(--hell-grau);
+}
+
+/* === FOOTER === */
+
+footer {
+    background-color: var(--dunkel-grau);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+
+footer > span {
+    font-size: 1.0rem;
+    color: var(--hell-grau);
+    margin: 0;
+}
