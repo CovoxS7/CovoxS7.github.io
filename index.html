@@ -1,1 +1,76 @@
-<!doctype html><html lang=""><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="/favicon.ico"><title>quiz</title><script defer="defer" src="/js/chunk-vendors.19842b1c.js"></script><script defer="defer" src="/js/app.4440dd22.js"></script><link href="/css/chunk-vendors.620ff5a8.css" rel="stylesheet"><link href="/css/app.fb3495c7.css" rel="stylesheet"></head><body><noscript><strong>We're sorry but quiz doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div id="app"></div></body></html>
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="./img/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Vegan Week</title>
+
+  <script type="module" crossorigin src="./assets/index-48df715d.js"></script>
+  <link rel="stylesheet" href="./assets/index-ae365677.css">
+</head>
+
+<body>
+  <header id="header">
+    <div class="header__banner container-fluid d-flex align-items-end flex-column">
+      <nav class="header__navigation navbar navbar-expand-lg fixed-top">
+        <div class="container">
+          <a class="header__navigation_brand anchor navbar-brand text-success" href="/#header">&raquo;<span
+              class="text-info">
+              The Vegan Week
+            </span>&laquo;</a>
+          <button class="header__navigation_burger_btn navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="header__navigation_burger_btn_icon material-icons-round">
+              menu
+            </span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a id="home" class="anchor nav-link text-info" href="/#main-content">Startseite</a>
+              </li>
+              <li class="nav-item">
+                <a id="meal-plan" class="anchor nav-link text-info" href="/#main-content">Speiseplan</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="anchor nav-link text-info" href="/#main-content" aria-expanded="false">
+                  Rezepte
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a id="breakfast" class="header__navigation_btn anchor dropdown-item text-info"
+                      href="/#main-content">Frühstück</a></li>
+                  <li><a id="lunch" class="header__navigation_btn anchor dropdown-item text-info"
+                      href="/#main-content">Mittagessen</a></li>
+                  <li><a id="dinner" class="header__navigation_btn anchor dropdown-item text-info"
+                      href="/#main-content">Abendessen</a></li>
+                  <li><a id="snacks" class="header__navigation_btn anchor dropdown-item text-info"
+                      href="/#main-content">Snacks</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="header__subheader mt-auto">
+        <div class="container">
+          <div class="header__subheader_button"><a href="#main-content"><span
+                class="header__subheader_button_icon material-icons-round">
+                arrow_downward
+              </span></a></div>
+          <div class="header__subheader_content d-flex align-items-center justify-content-center text-success">
+            <h2>Dein Veganer Speiseplan für die ganze Woche.</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content"></main>
+  
+
+</body>
+
+</html>
